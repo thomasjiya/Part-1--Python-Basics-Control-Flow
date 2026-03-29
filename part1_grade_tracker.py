@@ -300,3 +300,47 @@ print(f"Students Failed : {fail_count}")
 print(f"Class Topper    : {topper_name} ({topper_average})")
 print(f"Class Average   : {class_average}")
 #---------------------------------------------------------------------------------------------------------
+# Task 4 — String Manipulation Utility
+
+essay = "  python is a versatile language. it supports object oriented, functional, and procedural programming. python is widely used in data science and machine learning.  "
+
+# Step 1: Strip leading and trailing whitespace
+clean_essay = essay.strip()
+print("Step 1 — Stripped essay:")
+print(clean_essay)
+print()
+
+# Step 2: Convert to Title Case
+title_case = clean_essay.title()
+print("Step 2 — Title Case:")
+print(title_case)
+print()
+
+# Step 3: Count how many times "python" appears
+python_count = clean_essay.count("python")
+print("Step 3 — Count of 'python':")
+print(f"'python' appears {python_count} time(s)")
+print()
+
+# Step 4: Replace "python" with "Python 🐍"
+replaced_essay = clean_essay.replace("python", "Python 🐍")
+print("Step 4 — After replacement:")
+print(replaced_essay)
+print()
+
+# Step 5: Split into sentences by ". "
+sentences = clean_essay.split(". ")
+print("Step 5 — Sentences list:")
+print(sentences)
+print()
+
+# Step 6: Print each sentence numbered
+print("Step 6 — Numbered sentences:")
+for i, sentence in enumerate(sentences, start=1):
+
+    # Add "." at the end if it doesn't already end with one
+    if not sentence.endswith("."):
+        sentence = sentence + "."
+
+    print(f"{i}. {sentence}")
+#---------------------------------------------------------------------------------------------------------
